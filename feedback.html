@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+</head>
+
+<body>
+     <nav id="dilpreet">
+        
+        <div id="faculty">
+            <h1 class="primary  box">ONLINE FEEDBACK SURVEY</h1>
+            
+            <img src="https://sdtimes.com/wp-content/uploads/2022/07/pexels-borta-4331578-490x276.jpg" alt="bg">
+
+        </div>
+    <div>
+        <img src="img.png" class="menuicon" onclick="openmenu()" ">
+        <div class="menu-box" id="menu">
+            <div class="right">
+                <!-- <a href="#">Get started</a> -->
+            </div>
+            <div class="menu-links">
+                <a href="#">OUR SERVICES</a>
+                <a href="#">CHAT</a>
+                <a href="#">OUR SERVICES</a>
+                <img src="images.jpeg" class="seon" onclick="closemenu()">
+            </div>
+        </div>
+    </div>
+        <div id="contact-box">
+            
+            <form action="">
+                <h1 class="fil">
+                    FILL YOUR DETAILS
+                </h1>
+                <div class="form-group">
+                    <label class="boks" for="name">NAME:</label>
+                    <input class="secon prim type=" text" name="name" id="name" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label class="boks" for="nameE">UID:</label>
+                    <input class="sec secon" type="text" name="name" id="uid" placeholder="Enter your uid">
+                </div>
+                <div class="form-group">
+                    <label class="boks" for="name">EMAIL:</label>
+                    <input class="secon pri type=" text" name="name" id="email" placeholder="Enter your email ">
+                </div>
+                <div class="form-group">
+                    <label class="boks" for="name">BRANCH:</label>
+                    <input class="secon type=" text" name="name" id="branch" placeholder="Enter your branch ">
+                </div>
+                <button onclick="document.location = 'index.html'" class="btn" type="submit" , form="nameform" ,
+                    value="submit">Submit</button>
+
+
+
+
+            </form>
+        </div>
+    </nav>
+<script>
+    var menu = document.getElementById("menu");
+function closemenu(){
+    menu.style.top="-100vh";
+}
+function openmenu(){
+    menu.style.top="17%";
+}
+</script>
+</body>
+
+</html>

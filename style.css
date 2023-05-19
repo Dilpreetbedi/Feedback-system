@@ -1,0 +1,156 @@
+body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Radio Canada', sans-serif;
+  }
+  
+  #faculty img{
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    opacity: 0.5;
+    background-position: center;
+    filter: blur(9px);
+  }
+  h1{
+    display: flex;
+    justify-content: center;
+    
+  }
+  .box{
+    box-shadow:rgba(99, 99, 99, 0.2) 0px 2px 8px 1px;
+  }
+  #contact-box{
+    position:absolute;
+    top:100px;
+    left:450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    width: 300px;
+    
+  }
+  .form-group{
+    padding-bottom: 40px;
+    flex-direction: column;
+    
+  }
+  .boks{
+    transition-property: all;
+    transition-duration: 400ms;
+  }
+  .boks:hover{
+    cursor: pointer;
+    font-size: 22px;
+    
+  }
+  .sec{
+    margin-left: 38px;
+  }
+  .prim{
+      margin-left: 16px;
+    }
+  .fil{
+    font-family: Arial, Helvetica, sans-serif;
+    
+  }
+  .pri{
+    margin-left: 20px;
+  }
+  .form-group{
+     font-weight: bold ;
+     margin-top: 8px;
+     color:black;
+  }
+  .secon{
+    padding: 10px 10px;
+    border: 2px solid black;
+    background-color: aliceblue;
+    
+  }
+  #contact-box{
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 50px;
+    padding:10px 100px;
+  }
+  .btn{
+    margin-left: 100px;
+    padding: 8px 30px;
+    background-color: black;
+    color: whitesmoke;
+  }
+  .menuicon{
+    position: absolute;
+    width: 56px;
+    height: 50px;
+    top: 50px;
+    right: 50px;
+    cursor: pointer;
+    
+  }
+  .menu-box{
+    color: rgb(12, 13, 13);
+    width: 19%;
+    /* height: 40%; */
+    position: absolute;
+    background-color: rgb(250, 244, 244);
+    /* top: 30%; */
+    top: -100vh;
+    left: 62%;
+    padding: 50px 100px;
+    border-radius: 20px;
+    border: 2px double rgb(249, 245, 245);
+     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;;
+  }
+  .right{
+    position: absolute;
+    top: 5%;
+    right: 15%;
+    display: flex;
+    align-items:center ;
+  }
+  .right a{
+    text-decoration: none;
+    color: rgb(21, 20, 20);
+    background: red;
+   border-radius: 25px;
+   padding: 12px 12px;
+  }
+  .menu-links a{
+    text-decoration: none;
+    color: rgb(9, 9, 9);
+    display: block;
+    width: fit-content;
+    margin: 20px 0px;
+    font-size: 25px;
+    font-variant: small-caps;
+
+  }
+  .menu-links a::after{
+    content:'';
+    width: 40px;
+    height: 5px;
+    background: red;
+    display:inline-block ;
+    margin-left: 15px;
+    margin-bottom: 10px;
+
+
+  }
+  .menu-links a:hover{
+    font-weight: 700;
+  }
+  .menu-links a:hover::after{
+    display:inline-block ;
+    font-variant: small-caps;
+  }
+  .seon{
+    width: 10%;
+    height: 20%;
+    top: 5%;
+    right: 3%;
+    position: absolute;
+  }
+  
+
+ 

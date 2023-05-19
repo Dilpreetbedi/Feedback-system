@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style2.css" rel="stylesheet" type="text/css"/>
+</head>
+
+<body>
+    <img src="dilpreet.jpg" class="imageContainer" alt="Not found" />
+
+    <div class="container">
+        <form class="form" >
+            <div>
+                <nav class="fac">FACULTY DETAILS </nav>
+                <div class="info">
+                    <label for="name">Name
+                    <input class=" primary" type="text" name="name" id="name">
+                </label>
+                    <label class="pri" for="Subject">Subject
+                        <select class="secon" name="Subject" id="select">
+                            <option value="DSA">DSA</option>
+                            <option value="Computer Networks">Computer Networks</option>
+                            <option value="Software Engineering">Software Engineering</option>
+                            <option value="Python">Python</option>
+                            <option value="DBMS">DBMS</option>
+                        </select>
+                    </label>
+                </div>
+            </div>
+            <div>
+
+            </div>
+            </nav>
+            <div>
+                <button class="submitButton" onclick="document.location = 'index.html'" type="button">Prev</button>
+                <button class="submitButton" id="nextbutton" onclick="document.location = 'auto.html'" type="button">Next</button>
+            </div>
+
+        </form>
+    </div>
+     </body>
+
+<script>
+
+const next=document.getElementById("nextbutton");
+const Name=document.getElementById("name");
+const subject=document.getElementById("select");
+
+next.addEventListener("click",(event)=>{
+    event.preventDefault();
+    const namevalue=Name.value;
+    const subjectvalue=subject.value;
+    // console.log(namevalue);
+    // console.log(subjectvalue);
+    localStorage.setItem("namevalue",namevalue);
+    localStorage.setItem("subjectvalue",subjectvalue);
+
+});
+
+</script>
+
+</html>

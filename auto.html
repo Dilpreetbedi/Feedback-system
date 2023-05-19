@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="auto.css">
+</head>
+
+<body>
+    
+    <div class="container">
+        <img src="dilpreet.jpg" class="primary">
+        <div class="box">
+            <div class="fed">SUBMIT YOUR FEEDBACK</div>
+            <form >
+                <div class="item1">
+                    <label class="dilpreet" for="item1">1.Does teacher puts full efforts to make students understand concepts
+                    </label>
+                    <div class="item-1-answers">
+                       <div><input type="radio" name="Question1" id="item1" value="Strongly Disagree"> Strongly Disagree</div> 
+                       <div><input type="radio" name="Question1" id="item1" value="Disagree"> Disagree</div> 
+                       <div><input type="radio" name="Question1" id="item1" value="Agree"> Agree</div> 
+                       <div><input type="radio" name="Question1" id="item1" value="Strongly Agree"> Strongly Agree</div> 
+                    </div>
+                </div>
+                <div class="item1">
+                    <label class="dilpreet" for="item2">2. Does the college faculty has good knowledge in their areas of teaching
+
+
+                    </label>
+                    <div class="item-1-answers">
+                       <div><input type="radio" name="Question2" id="item2" value="Strongly Disagree"> Strongly Disagree</div> 
+                       <div><input type="radio" name="Question2" id="item2" value="Disagree"> Disagree</div> 
+                       <div><input type="radio" name="Question2" id="item2" value="Agree"> Agree</div> 
+                       <div><input type="radio" name="Question2" id="item2" value="Strongly Agree"> Strongly Agree</div> 
+                    </div>
+                </div>
+
+                <div class="item1">
+                    <label class="dilpreet" for="item3">3. Does Study material provided by the teacher is efficient.
+                    </label>
+                    <div  class="item-1-answers">
+                       <div><input type="radio" name="Question3" id="item3" value="Strongly Disagree"> Strongly Disagree</div> 
+                       <div><input type="radio" name="Question3" id="item3" value="Disagree"> Disagree</div> 
+                       <div><input type="radio" name="Question3" id="item3" value="Agree"> Agree</div> 
+                       <div><input type="radio" name="Question3" id="item3" value="Strongly Agree  "> Strongly  Agree</div> 
+                    </div>
+                </div>
+                <div class="item1">
+                    <label  class="dilpreet" for="item4">4.Does the teacher have  strong command of the subject matter
+                    </label>
+                    <div class="item-1-answers">
+                       <div><input type="radio" name="Question4" id="item4" value="Strongly Disagree"> Strongly Disagree</div> 
+                       <div><input type="radio" name="Question4" id="item4" value="Disagree"> Disagree</div> 
+                       <div><input type="radio" name="Question4" id="item4" value="Agree"> Agree</div> 
+                       <div><input type="radio" name="Question4" id="item4" value="Strongly Agree"> Strongly Agree</div> 
+                    </div>
+                </div>
+                <div class="item1">
+                    <label  class="dilpreet" for="item5">5.Does the faculty complete the syllabus on time.
+                    </label>
+                    <div class="item-1-answers">
+                       <div><input type="radio" name="Question5" id="item5" value="Strongly Disagree"> Strongly Disagree</div> 
+                       <div><input type="radio" name="Question5" id="item5" value="Disagree"> Disagree</div> 
+                       <div><input type="radio" name="Question5" id="item5" value="Agree"> Agree</div> 
+                       <div><input type="radio" name="Question5" id="item5" value="Strongly Agree"> Strongly Agree</div> 
+                    </div>
+                   
+                </div>
+            </form>
+            <button class="submitButton" id="submitbutton" type="button" onclick="handleSubmit()">SUBMIT</button>
+        </div>
+    </div>
+</body>
+<script>
+   //1
+    const radiobuttons1=document.getElementsByName("Question1");
+
+   
+    
+//2
+const radiobuttons2=document.getElementsByName("Question2");
+
+    
+
+//3
+
+const radiobuttons3=document.getElementsByName("Question3");
+
+    
+//4
+
+const radiobuttons4=document.getElementsByName("Question4");
+
+   
+//5
+const radiobuttons5=document.getElementsByName("Question5");
+
+    
+
+  const opinionsubmithandler=document.getElementById("submitbutton");
+  
+  opinionsubmithandler.addEventListener("click",(event)=>{
+    event.preventDefault();
+    
+    let selectedvalue1;
+    for(let i = 0; i < radiobuttons1.length; i++){
+
+        if(radiobuttons1[i].checked){
+            selectedvalue1=radiobuttons1[i].value;
+        break;
+            }
+
+
+    }
+
+    let selectedvalue2;
+    for(let i = 0; i < radiobuttons2.length; i++){
+
+        if(radiobuttons2[i].checked){
+            selectedvalue2=radiobuttons2[i].value;
+        break;
+            }
+
+
+    }
+
+    let selectedvalue3;
+    for(let i = 0; i < radiobuttons3.length; i++){
+
+        if(radiobuttons3[i].checked){
+            selectedvalue3=radiobuttons3[i].value;
+        break;
+            }
+
+
+    }
+
+    let selectedvalue4;
+    for(let i = 0; i < radiobuttons4.length; i++){
+
+        if(radiobuttons4[i].checked){
+            selectedvalue4=radiobuttons4[i].value;
+        break;
+            }
+
+
+    }
+  
+
+    let selectedvalue5;
+    for(let i = 0; i < radiobuttons5.length; i++){
+
+        if(radiobuttons5[i].checked){
+            selectedvalue5=radiobuttons5[i].value;
+        break;
+            }
+
+
+    }
+
+   const feedback={
+    "name":localStorage.getItem("namevalue"),
+    "subject":localStorage.getItem("subjectvalue"),
+    "radio1":selectedvalue1,
+    "radio2":selectedvalue2,
+    "radio3":selectedvalue3,
+    "radio4":selectedvalue4,
+    "radio5":selectedvalue5
+   }
+  console.log(feedback);
+
+   fetch('http://localhost:3000/api/submit', {
+  method: 'POST',
+  body: JSON.stringify(feedback),
+  headers: {'Content-Type': 'application/json'}
+})
+.then(response => response.json(
+    {success:true,
+     message:"feedback submitted successfully"   
+    }
+))
+.then(data => console.log(data))
+.catch(error => console.error(error));
+   
+
+
+
+
+});
+
+
+ 
+
+    function handleSubmit(){
+        alert("Form submitted")
+    }
+
+
+</script>
+</html>
